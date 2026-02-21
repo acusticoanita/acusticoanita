@@ -1,1 +1,271 @@
-<b>Em breve novo site</b>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acústico Anita | Rock Nacional e Internacional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { --rock-orange: #FF6600; --rock-black: #0a0a0a; --rock-white: #ffffff; }
+        body { background-color: var(--rock-black); color: var(--rock-white); font-family: 'Roboto', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3, .nav-link { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        
+        .text-orange { color: var(--rock-orange) !important; }
+
+        /* Navbar */
+        .navbar { background-color: rgba(0,0,0,0.95); border-bottom: 2px solid var(--rock-orange); }
+        .nav-link { color: var(--rock-white) !important; font-size: 0.9rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav-link:hover { color: var(--rock-orange) !important; transform: scale(1.1) rotate(-2deg); }
+
+        /* Hero */
+        .hero { 
+            height: 95vh; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('photo-1470229722913-7c0e2dbbafd3-3.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: flex-start; justify-content: right;
+            padding-right: 22%;
+            padding-top: 40px;
+        }
+        .logo-hero { max-width: 220px; filter: drop-shadow(0 0 15px rgba(255,102,0,0.5)); animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(255,102,0,0.8)); }
+            100% { transform: scale(1); }
+        }
+
+        /* Integrantes */
+        .member-img { border: 3px solid var(--rock-orange); filter: grayscale(100%); transition: 0.4s; width: 100%; max-width: 250px; border-radius: 50%; }
+        .member-card:hover .member-img { filter: grayscale(0%); transform: scale(1.05) rotate(3deg); }
+
+        /* Repertório Tags */
+        .badge-rock { background: transparent; border: 1px solid var(--rock-orange); color: var(--rock-orange); margin: 5px; padding: 8px 15px; font-size: 0.9rem; transition: 0.3s; }
+        .badge-rock:hover { background: var(--rock-orange); color: black; cursor: default; }
+
+        /* Botões e Links */
+        .btn-orange { background-color: var(--rock-orange); color: black; font-weight: bold; border-radius: 0; padding: 12px 30px; border: none; transition: all 0.3s ease; }
+        .btn-orange:hover { 
+            background-color: #e65c00; 
+            color: white; 
+            box-shadow: 0 0 20px rgba(230, 92, 0, 0.6); 
+            transform: translateY(-3px); 
+        }
+
+        .email-link { color: var(--rock-white); text-decoration: none; font-size: 1.2rem; transition: 0.3s; border-bottom: 1px solid transparent; }
+        .email-link:hover { color: var(--rock-orange); border-bottom: 1px solid var(--rock-orange); text-shadow: 0 0 10px rgba(255,102,0,0.5); }
+
+        /* Ícones de Redes Sociais */
+        .social-link { font-size: 2rem; color: white; transition: 0.3s; display: inline-block; }
+        .social-link:hover { color: var(--rock-orange); transform: translateY(-5px) rotate(10deg); }
+        
+        .fa-guitar, .fa-drum { color: var(--rock-orange); margin: 0 10px; }
+
+        @media (max-width: 768px) {
+            .hero { 
+                height: 95vh; 
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('photo-1470229722913-7c0e2dbbafd3-3.jpg');
+                background-size: cover; background-position: center;
+                display: flex; align-items: flex-start; justify-content: right;
+                padding-right: 22%;
+                padding-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="1000296421.png" alt="Logo" width="40" class="me-2">
+                <span class="text-white fw-bold">ACÚSTICO <span class="text-orange">ANITA</span></span>
+            </a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shows"><i class="fa-solid fa-calendar-days me-1"></i> Shows</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#integrantes"><i class="fa-solid fa-skull me-1"></i> Integrantes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#repertorio"><i class="fa-solid fa-compact-disc me-1"></i> Repertório</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato"><i class="fa-solid fa-hand-fist me-1"></i> Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center">
+        <div data-aos="zoom-in" data-aos-duration="1500">
+            <img src="1000296421.png" alt="Logo Acústico Anita" class="logo-hero mb-4">
+            <h1 class="display-2 fw-bold text-white mb-0">ACÚSTICO</h1>
+            <h1 class="display-1 fw-bold mb-3 text-orange" style="margin-top: -20px;">ANITA</h1>
+            <p class="lead text-white-50"><i class="fa-solid fa-bolt"></i> Rock Nacional e Internacional</p>
+        </div>
+    </header>
+    
+    <section id="musica" class="bg-dark py-5">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="mb-4">... <i class="fa-solid fa-volume-high"></i></h2>
+            <div class="ratio ratio-16x9 shadow-lg mx-auto" style="max-width: 800px; border: 2px solid var(--rock-orange);">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="integrantes" class="py-5">
+        <div class="container text-center py-4">
+            <h2 class="mb-5" data-aos="fade-right">Integrantes <i class="fa-solid fa-skull"></i></h2>
+            <div class="row g-4">
+                <div class="col-md-3 member-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="photo-1549419017-f3c33771e65e.png" class="member-img mb-3" alt="Filipe Sartor">
+                    <h4 class="text-orange">Filipe Sartor</h4>
+                    <p class="small text-white-50">Voz principal, violão e guitarra base.</p>
+                </div>
+                <div class="col-md-3 member-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="photo-1511671782779-c97d3d27a1d4.png" class="member-img mb-3" alt="Lucas">
+                    <h4 class="text-orange">Lucas</h4>
+                    <p class="small text-white-50">Guitarra base e solos.</p>
+                </div>
+                <div class="col-md-3 member-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="photo-1564186763535-ebb21ef5277f.png" class="member-img mb-3" alt="Jonas Dutra">
+                    <h4 class="text-orange">Jonas Dutra</h4>
+                    <p class="small text-white-50">Baixo. Groveiro introvertido!</p>
+                </div>
+                <div class="col-md-3 member-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="photo-1519892300165-cb5542fb47c7.png" class="member-img mb-3" alt="Juliano">
+                    <h4 class="text-orange">Juliano</h4>
+                    <p class="small text-white-50">Bateria. É esforçado!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shows" class="bg-dark py-5">
+        <div class="container py-4 text-center" data-aos="fade-in">
+            <h2 class="mb-5">Próximos Shows <i class="fa-solid fa-calendar-days"></i></h2>
+            <div class="table-responsive mx-auto" style="max-width: 900px;">
+                <table class="table table-dark table-hover align-middle">
+                    <tbody>
+                        <tr><td class="text-orange fw-bold">20 MAR</td><td>URUSSANGA, SC</td><td>Pub Central</td><td class="text-end"><button class="btn btn-outline-light btn-sm">INFO</button></td></tr>
+                        <tr><td class="text-orange fw-bold">27 MAR</td><td>CRICIÚMA, SC</td><td>Rock Bar</td><td class="text-end"><button class="btn btn-outline-light btn-sm">INFO</button></td></tr>
+                        <tr><td class="text-orange fw-bold">11 ABR</td><td>ORLEANS, SC</td><td>Festival de Cerveja</td><td class="text-end"><button class="btn btn-outline-light btn-sm">TICKETS</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="repertorio" class="py-5">
+        <div class="container py-4">
+            <h2 class="text-center mb-4" data-aos="zoom-in">Setlist de Energia <i class="fa-solid fa-compact-disc"></i></h2>
+            <p class="text-center text-white-50 mb-5">Momento acústico intimista e explosões de energia.</p>
+            <div class="row text-center">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <h5 class="text-orange border-bottom border-secondary pb-2"><i class="fa-solid fa-flag"></i> ÍCONES NACIONAIS</h5>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <span class="badge badge-rock">Skank</span>
+                        <span class="badge badge-rock">Jota Quest</span>
+                        <span class="badge badge-rock">Cássia Eller</span>
+                        <span class="badge badge-rock">Nando Reis</span>
+                        <span class="badge badge-rock">Frejat</span>
+                        <span class="badge badge-rock">Nenhum de Nós</span>
+                        <span class="badge badge-rock">Capital Inicial</span>
+                        <span class="badge badge-rock">Engenheiros do Hawaii</span>
+                        <span class="badge badge-rock">Legião Urbana</span>
+                        <span class="badge badge-rock">Raul Seixas</span>
+                        <span class="badge badge-rock">TNT</span>
+                        <span class="badge badge-rock">Detonautas</span>
+                        <span class="badge badge-rock">CPM 22</span>
+                        <span class="badge badge-rock">Charlie Brown Jr.</span>
+                        <span class="badge badge-rock">Raimundos</span>
+                        <span class="badge badge-rock">RPM</span>
+                        <span class="badge badge-rock">Acústicos & Valvulados</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <h5 class="text-orange border-bottom border-secondary pb-2"><i class="fa-solid fa-earth-americas"></i> INTERNACIONAIS</h5>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <span class="badge badge-rock">Foo Fighters</span>
+                        <span class="badge badge-rock">Audioslave</span>
+                        <span class="badge badge-rock">Pink Floyd</span>
+                        <span class="badge badge-rock">Guns N' Roses</span>
+                        <span class="badge badge-rock">R.E.M.</span>
+                        <span class="badge badge-rock">KISS</span>
+                        <span class="badge badge-rock">Red Hot Chili Peppers</span>
+                        <span class="badge badge-rock">The Strokes</span>
+                        <span class="badge badge-rock">Green Day</span>
+                        <span class="badge badge-rock">Steppenwolf</span>
+                        <span class="badge badge-rock">Creedence</span>
+                    </div>
+                </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-5 bg-dark">
+        <div class="container text-center py-4">
+            <h2 class="mb-5" data-aos="fade-up">Fale Conosco <i class="fa-solid fa-hand-fist"></i></h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="p-4 border border-secondary h-100">
+                        <h4 class="text-orange">JULIANO</h4>
+                        <p>+55 51 9 8234-6281 </p>
+                        <a href="https://wa.me/5551982346281" class="btn btn-orange w-100"><i class="fa-brands fa-whatsapp me-2"></i>WHATSAPP</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="p-4 border border-secondary h-100">
+                        <h4 class="text-orange">FILIPE</h4>
+                        <p>+55 48 9 9916-5566 </p>
+                        <a href="https://wa.me/5548999165566" class="btn btn-orange w-100"><i class="fa-brands fa-whatsapp me-2"></i>WHATSAPP</a>
+                    </div>
+                </div>
+                
+                <div class="col-12 mt-5" data-aos="fade-up">
+                    <p class="mb-2 text-white-50 text-uppercase">Para parcerias e orçamentos formais:</p>
+                    <a href="mailto:acusticoanita@outlook.com" class="email-link">
+                        <i class="fa-solid fa-envelope me-2"></i>acusticoanita@outlook.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center py-5">
+        <div class="container" data-aos="fade-up">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/acustico.anita/" class="social-link mx-3"><i class="fa-brands fa-instagram"></i></a>
+                <!--a href="#" class="social-link mx-3"><i class="fa-brands fa-spotify"></i></a>
+                <a href="#" class="social-link mx-3"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-link mx-3"><i class="fa-brands fa-tiktok"></i></a-->
+            </div>
+            <p class="small text-white-50">Siga o Acústico Anita e faça parte do culto!</p>
+        </div>
+    </footer>
+
+    <footer class="py-4 text-center border-top border-secondary">
+        <div class="container">
+            <p class="mb-2"><strong>Porque contratar a Acústico Anita?</strong> </p>
+            <p class="small text-secondary mb-0">Unificamos música de qualidade, energia contagiante e conexão genuína com o público.</p>
+            <p class="small text-secondary mt-2 mb-0">© 2026 ACÚSTICO ANITA</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration: 1000, once: true});
+    </script>
+</body>
+</html>
